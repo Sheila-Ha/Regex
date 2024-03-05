@@ -31,9 +31,9 @@ This is a tutorial that explains how a specific regular expression, or Regex, fu
   1. Username  
   2. @ symbol  
   3. Domain name (the '.com' aspect)  
-  4. Service provider (gmail, yahoo)  
-### Anchors  
-|  | Braking it down|
+  4. Service provider (gmail, yahoo)   
+    
+|  | Braking it down|  
 |---|--------------------------------|
 | ^ | Asserts the beginning of a line|
 | [] | Match any one of the characters inside the brackets|
@@ -48,21 +48,27 @@ This is a tutorial that explains how a specific regular expression, or Regex, fu
 | $ | Asserts the end of a line|  
 | / | Indicates that the Regex is ending|   
 |gm | Modifiers that indicate that the search should be performed "globally" (meaning don't return after you find the first match), and "multi-line" (meaning, search multiple lines.)|
+### Anchors  
+The anchors used in this Regex expression for matching an email are ^, which indicates the beginning of the string and $ to indicate the ending of the string. (m), or multiline is not enabled, so the Regex and at $.
 
 ### Quantifiers  
 Quantifiers in this Regex includes the + operator, which will connect the users email name + email service + .com. Another quantifier for this Regex includes {2,6}, which will allow a match range of 2-6 characters for the character set of [a-z\.]
 
-### OR Operator
+### OR Operator  
 
-### Character Classes
+
+### Character Classes  
+The character class in this express is /d, which matches a single characters that is a digit from 0-9. It will only match a single digit such as "4", but not "444".
 
 ### Flags
 
-### Grouping and Capturing
+### Grouping and Capturing  
+Capturing group #1 in this expression is ([a-z0-9_\.-]+) that matches the user email name. The second capturing group is ([\da-z\.-]+) which will match the email service. Then lastly, capture group three is ([a-z\.]{2,6}) to capture the .com.
 
-### Bracket Expressions
-
-### Greedy and Lazy Match
+### Bracket Expressions  
+Bracketed expressions for email validation includes the character sets of [a-z0-9_\.-], which is matching any letter a-z and is case sensitive. It also matches a character 0-9 and matches the characters "_" , "-" , and "."; [\da-z\.-], which is matching a single digit from 0-9, any character a-z (case sensitive), and the characters "." and "-".; [a-z\.] matches any character a-z(case sensitive) and the character ".".  
+### Greedy and Lazy Match  
+This Regex includes greedy matches. Since it includes the + Quantifier, it will match as many times as possible giving back as needed. Another greedy Quantifier used in this regex is {} when matching `{2,6} for the last capture group.
 
 ### Boundaries
 
