@@ -21,7 +21,6 @@ WHEN I reach the end of the tutorial
 THEN I find a section about the author and a link to the author’s GitHub profile  
 
 ## Credits
-
 [Abstractapi](https://www.abstractapi.com/guides/email-validation-regex-javascript)  
 [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)  
 [Stack Overflow](https://stackoverflow.com/?newreg=67d94556b887449fa2885dadf54a5439) 
@@ -31,9 +30,9 @@ THEN I find a section about the author and a link to the author’s GitHub profi
 If you have any questions, or additional feedback, please feel free to email me and I will respond as soon as possible.
 
 * [Gist link](https://github.com/Sheila-Ha/Regex/blob/main/gist-template.md)  
+* [GitHub](https://github.com/Sheila-Ha)
 
 * Email - slhanson11@live.com
 
 ## License 
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
