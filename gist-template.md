@@ -10,7 +10,6 @@ This is a simple tutorial of what Regex is and how it can be used as a tool for 
   - [Regex Components](#regex-components)
     - [Anchors](#anchors)
     - [Quantifiers](#quantifiers)
-    - [OR Operator](#or-operator)
     - [Character Classes](#character-classes)
     - [Flags](#flags)
     - [Grouping and Capturing](#grouping-and-capturing)
@@ -23,7 +22,7 @@ This is a simple tutorial of what Regex is and how it can be used as a tool for 
 
 ## Summary  
 This is a tutorial that explains how a specific regular expression, or Regex, functions by breaking down each part of the expression and describing what it does. Because an email is a string, you can use Regex to validate email. The Regex function that will be broke down is:   
- /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+` /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
  This function or pattern is common in web development. It ensures that a user input conforms to the structure of a valid email address. 
 
 ## Regex Components
@@ -35,40 +34,38 @@ This is a tutorial that explains how a specific regular expression, or Regex, fu
     
 |  | Braking it down|  
 |---|--------------------------------|
-| ^ | Asserts the beginning of a line|
-| [] | Match any one of the characters inside the brackets|
-| A-Za-z | Match any uppercase and lowercase letters|  
-| 0-9 | Match any digits 0-9|  
-| _!#$%&'*+ | Match any one of the literal characters in the list|  
-| \/ | Match the / character|  
-| =?`{\|}~^.-  | Many any one of the literal characters in the list|  
-| + | Matches the previous token (in this case the group between the brackets) between one and unlimited times|  
-| @ | Matches the "@" character|   
-| [A-Za-z0-9.-]+ | Matches any uppercase or lowercase letters, any digits 0 9, the literal characters . and - (and matches that grouping as many times as necessary|  
-| $ | Asserts the end of a line|  
-| / | Indicates that the Regex is ending|   
-|gm | Modifiers that indicate that the search should be performed "globally" (meaning don't return after you find the first match), and "multi-line" (meaning, search multiple lines.)|
+| ` ^ `| Asserts the beginning of a line|
+|` [] `| Match any one of the characters inside the brackets|
+|` A-Za-z `| Match any uppercase and lowercase letters|  
+|` 0-9 `| Match any digits 0-9|  
+|` _!#$%&'*+ `| Match any one of the literal characters in the list|  
+|` \/ `| Match the / character|  
+|``` =?`{\|}~^.- ``` | Many any one of the literal characters in the list|  
+|` + `| Matches the previous token (in this case the group between the brackets) between one and unlimited times|  
+|` @ `| Matches the "@" character|   
+|` [A-Za-z0-9.-]+ `| Matches any uppercase or lowercase letters, any digits 0 9, the literal characters . and - (and matches that grouping as many times as necessary|  
+|` $ `| Asserts the end of a line|  
+|` / `| Indicates that the Regex is ending|   
+|` gm `| Modifiers that indicate that the search should be performed "globally" (meaning don't return after you find the first match), and "multi-line" (meaning, search multiple lines.)|
 ### Anchors  
-The anchors used in this Regex expression for matching an email are ^, which indicates the beginning of the string and $ to indicate the ending of the string. (m), or multiline is not enabled, so the Regex and at $.
+The anchors used in this Regex expression for matching an email are `^`, which indicates the beginning of the string and `$` to indicate the ending of the string. `(m)`, or multiline is not enabled, so the Regex and at `$`.
 
 ### Quantifiers  
-Quantifiers in this Regex includes the + operator, which will connect the users email name + email service + .com. Another quantifier for this Regex includes {2,6}, which will allow a match range of 2-6 characters for the character set of [a-z\.]
-
-### OR Operator  
-
+Quantifiers in this Regex includes the `+` operator, which will connect the users email name + email service + `.com`. Another quantifier for this Regex includes `{2,6}`, which will allow a match range of 2-6 characters for the character set of `[a-z\.]`.
 
 ### Character Classes  
-The character class in this express is /d, which matches a single characters that is a digit from 0-9. It will only match a single digit such as "4", but not "444".
+The character class in this express is `/d`, which matches a single characters that is a digit from 0-9. It will only match a single digit such as "4", but not "444".
 
-### Flags
+### Flags  
+A flag is an optional parameter to a regex that modifies its behavior of searching. A flag changes the default searching behavior of a regular expression. It makes a regex search in a different way. A flag is denoted using a single lowercase alphabetic character.
 
 ### Grouping and Capturing  
-Capturing group #1 in this expression is ([a-z0-9_\.-]+) that matches the user email name. The second capturing group is ([\da-z\.-]+) which will match the email service. Then lastly, capture group three is ([a-z\.]{2,6}) to capture the .com.
+Capturing group first in this expression is `([a-z0-9_\.-]+)` that matches the user email name. The second capturing group is `([\da-z\.-]+)` which will match the email service. The last capturing group is `([a-z\.]{2,6})` to capture the `.com`.
 
 ### Bracket Expressions  
-Bracketed expressions for email validation includes the character sets of [a-z0-9_\.-], which is matching any letter a-z and is case sensitive. It also matches a character 0-9 and matches the characters "_" , "-" , and "."; [\da-z\.-], which is matching a single digit from 0-9, any character a-z (case sensitive), and the characters "." and "-".; [a-z\.] matches any character a-z(case sensitive) and the character ".".  
+Bracketed expressions for email validation includes the character sets of `[a-z0-9_\.-]`, which is matching any letter a-z and is case sensitive. It also matches a character 0-9 and matches the characters "_" , "-" , and "."; `[\da-z\.-]`, which is matching a single digit from 0-9, any character a-z (case sensitive), and the characters "." and "-".; `[a-z\.]` matches any character a-z(case sensitive) and the character ".".  
 ### Greedy and Lazy Match  
-This Regex includes greedy matches. Since it includes the + Quantifier, it will match as many times as possible giving back as needed. Another greedy Quantifier used in this regex is {} when matching `{2,6} for the last capture group.
+This Regex includes greedy matches. Since it includes the `+` Quantifier, it will match as many times as possible giving back as needed. Another greedy Quantifier used in this regex is `{}` when matching `{2,6}` for the last capture group.
 
 ### Boundaries
 
