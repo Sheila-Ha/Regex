@@ -1,4 +1,4 @@
-# Regex Tutorial to Validate Emails  
+# Validate Email Regex 
 
 ## Description  
 This project includes an easy breakdown of what Regex (Regular Expression) are and how they can be used to validate an email in your code.  
